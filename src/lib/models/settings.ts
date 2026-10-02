@@ -5,6 +5,7 @@ export const LANGUAGE_IDS = {
   zhTW: 'zh-TW',
   jaJP: 'ja-JP',
   koKR: 'ko-KR',
+  viVN: 'vi-VN',
   enUS: 'en-US',
 } as const;
 
@@ -38,6 +39,12 @@ export const LANGUAGE_OPTIONS = [
     id: LANGUAGE_IDS.koKR,
     labelKey: 'settings.languageNames.koKR',
     browserLanguagePrefixes: ['ko'],
+    websitePath: '',
+  },
+  {
+    id: LANGUAGE_IDS.viVN,
+    labelKey: 'settings.languageNames.viVN',
+    browserLanguagePrefixes: ['vi'],
     websitePath: '',
   },
   {

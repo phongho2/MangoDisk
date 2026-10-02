@@ -1,6 +1,6 @@
 import { ICON_NAMES } from './ui';
 
-export const APP_NAME = 'MangoDisk' as const;
+export const APP_NAME = 'BPDiskTool' as const;
 export const APP_ICON_PATH = '/mangodisk.svg' as const;
 export const APP_SHELL_EXPANDED_MIN_WIDTH_PX = 1100;
 
@@ -50,9 +50,9 @@ export function toggleSidebarLayout(state: SidebarLayoutState): SidebarLayoutSta
 
 export const PROJECT_LINKS = {
   website: 'https://mangodisk.app',
-  repository: 'https://github.com/harry0703/mangodisk',
-  issues: 'https://github.com/harry0703/mangodisk/issues',
-  license: 'https://github.com/harry0703/mangodisk/blob/main/LICENSE',
+  repository: 'https://github.com/phongho2/MangoDisk',
+  issues: 'https://github.com/phongho2/MangoDisk/issues',
+  license: 'https://github.com/phongho2/MangoDisk/blob/main/LICENSE',
 } as const;
 
 export const PAGE_IDS = {
