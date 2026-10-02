@@ -6,10 +6,11 @@ import { LanguageService } from '@/lib/services/language-service';
 import enUS from '@/locales/en-US.json';
 import jaJP from '@/locales/ja-JP.json';
 import koKR from '@/locales/ko-KR.json';
+import viVN from '@/locales/vi-VN.json';
 import zhCN from '@/locales/zh-CN.json';
 import zhTW from '@/locales/zh-TW.json';
 
-const localeResources = [zhCN, zhTW, jaJP, koKR, enUS];
+const localeResources = [zhCN, zhTW, jaJP, koKR, viVN, enUS];
 
 function leafKeys(value: unknown, prefix = ''): string[] {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return [prefix];
@@ -102,6 +103,7 @@ describe('i18n resources', () => {
       [LANGUAGE_IDS.enUS]: 'Open',
       [LANGUAGE_IDS.jaJP]: '開く',
       [LANGUAGE_IDS.koKR]: '열기',
+      [LANGUAGE_IDS.viVN]: 'Mở',
       [LANGUAGE_IDS.zhCN]: '打开',
       [LANGUAGE_IDS.zhTW]: '開啟',
     };
@@ -118,6 +120,7 @@ describe('i18n resources', () => {
     expect(LanguageService.resolveSupportedLanguage(['zh-Hant-HK', 'en-US'])).toBe(LANGUAGE_IDS.zhTW);
     expect(LanguageService.resolveSupportedLanguage(['ja-JP'])).toBe(LANGUAGE_IDS.jaJP);
     expect(LanguageService.resolveSupportedLanguage(['ko-KR', 'en-US'])).toBe(LANGUAGE_IDS.koKR);
+    expect(LanguageService.resolveSupportedLanguage(['vi-VN', 'en-US'])).toBe(LANGUAGE_IDS.viVN);
     expect(LanguageService.resolveSupportedLanguage(['ko'])).toBe(LANGUAGE_IDS.koKR);
   });
 
@@ -137,5 +140,8 @@ describe('i18n resources', () => {
 
     i18n.global.locale.value = LANGUAGE_IDS.koKR;
     expect(i18n.global.t('common.fileCount', { count: 2 }, 2)).toBe('2개 파일');
+
+    i18n.global.locale.value = LANGUAGE_IDS.viVN;
+    expect(i18n.global.t('common.fileCount', { count: 2 }, 2)).toBe('2 tệp');
   });
 });

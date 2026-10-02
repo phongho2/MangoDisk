@@ -2,16 +2,12 @@ html[data-skin='mangodisk'] {
   color-scheme: light;
 
   /*
-   * Brand colors come directly from the approved flat logo. UI primary is a
-   * darker shade of mango orange in light mode so primary text remains
-   * readable on warm-white surfaces; the logo keeps the original bright hue.
+   * Internal BPDiskTool branding uses a deep navy/slate foundation plus a
+   * cyan/teal interaction accent suitable for utility-style interfaces.
    */
-  --brand-mango: oklch(0.7323 0.1825 54.1);
-  --brand-cream: oklch(0.9679 0.0226 78.22);
-  --brand-leaf: oklch(0.6504 0.1521 128.45);
-  --brand-stem: oklch(0.4334 0.0957 57.45);
-  --brand-primary: oklch(0.58 0.165 52);
-  --brand-primary-foreground: oklch(0.985 0.014 78);
+  --brand-core: oklch(0.31 0.045 255);
+  --brand-primary: oklch(0.56 0.128 220);
+  --brand-primary-foreground: oklch(0.985 0.004 235);
 
   /*
    * Desktop utilities need to fit dense scan results into constrained windows.
@@ -19,41 +15,41 @@ html[data-skin='mangodisk'] {
    * nested shells, cards, and result rows feel bulky.
    */
   --radius: 0.5rem;
-  --background: oklch(0.984 0.014 78);
-  --workspace: oklch(0.997 0.004 78);
-  --foreground: oklch(0.245 0.025 58);
+  --background: oklch(0.97 0.012 242);
+  --workspace: oklch(0.99 0.004 235);
+  --foreground: oklch(0.28 0.03 248);
   --card: oklch(1 0 0);
   --card-foreground: var(--foreground);
   --popover: oklch(1 0 0);
   --popover-foreground: var(--foreground);
   --primary: var(--brand-primary);
   --primary-foreground: var(--brand-primary-foreground);
-  --secondary: oklch(0.952 0.023 76);
-  --secondary-foreground: oklch(0.36 0.045 57);
-  --muted: oklch(0.96 0.012 78);
-  --muted-foreground: oklch(0.52 0.03 60);
-  --accent: oklch(0.94 0.045 70);
-  --accent-foreground: oklch(0.45 0.12 52);
-  --destructive: oklch(0.59 0.21 25);
+  --secondary: oklch(0.948 0.014 242);
+  --secondary-foreground: oklch(0.36 0.03 248);
+  --muted: oklch(0.956 0.01 242);
+  --muted-foreground: oklch(0.52 0.025 248);
+  --accent: oklch(0.94 0.032 214);
+  --accent-foreground: oklch(0.37 0.082 220);
+  --destructive: oklch(0.61 0.205 26);
   --destructive-foreground: oklch(0.985 0 0);
-  --success: oklch(0.52 0.13 128);
-  --success-foreground: oklch(0.4 0.1 128);
-  --warning: oklch(0.58 0.13 72);
-  --warning-foreground: oklch(0.44 0.1 62);
-  --border: oklch(0.9 0.025 72);
-  --input: oklch(0.87 0.032 70);
-  --ring: oklch(0.62 0.17 52);
-  --sidebar: oklch(0.968 0.024 75);
-  --sidebar-foreground: oklch(0.3 0.03 58);
-  --sidebar-accent: oklch(0.925 0.06 67);
-  --sidebar-accent-foreground: oklch(0.43 0.13 52);
-  --sidebar-border: oklch(0.885 0.03 70);
+  --success: oklch(0.57 0.13 161);
+  --success-foreground: oklch(0.39 0.1 161);
+  --warning: oklch(0.72 0.16 84);
+  --warning-foreground: oklch(0.44 0.11 78);
+  --border: oklch(0.89 0.014 242);
+  --input: oklch(0.86 0.018 240);
+  --ring: oklch(0.58 0.126 219);
+  --sidebar: oklch(0.95 0.014 242);
+  --sidebar-foreground: oklch(0.31 0.03 248);
+  --sidebar-accent: oklch(0.91 0.04 220);
+  --sidebar-accent-foreground: oklch(0.36 0.082 220);
+  --sidebar-border: oklch(0.87 0.016 242);
 
-  /* Charts stay distinguishable while reserving orange and green for brand recognition. */
-  --chart-1: var(--brand-mango);
-  --chart-2: var(--brand-leaf);
-  --chart-3: oklch(0.64 0.12 205);
-  --chart-4: oklch(0.7 0.14 82);
+  /* Charts stay distinguishable while reserving cyan/teal for key interactions. */
+  --chart-1: var(--brand-primary);
+  --chart-2: oklch(0.6 0.1 182);
+  --chart-3: oklch(0.59 0.1 265);
+  --chart-4: oklch(0.72 0.16 84);
   --chart-5: oklch(0.62 0.15 330);
   --file-code: var(--chart-1);
   --file-audio: var(--chart-5);
@@ -67,45 +63,44 @@ html[data-skin='mangodisk'][data-theme='dark'] {
   color-scheme: dark;
 
   /*
-   * Dark surfaces use warm brown-black neutrals derived from the logo stem.
-   * The original mango orange is bright enough here and becomes the primary
-   * interaction color without requiring a separate dark-mode logo.
+   * Dark surfaces stay in a slate/navy range and keep cyan accents distinct
+   * from semantic warning and destructive states.
    */
-  --brand-primary: var(--brand-mango);
-  --brand-primary-foreground: oklch(0.233 0.023 57);
-  --background: oklch(0.18 0.012 60);
+  --brand-primary: oklch(0.66 0.14 219);
+  --brand-primary-foreground: oklch(0.19 0.02 245);
+  --background: oklch(0.19 0.02 245);
   --workspace: transparent;
-  --foreground: oklch(0.93 0.014 78);
-  --card: oklch(0.225 0.018 60);
+  --foreground: oklch(0.91 0.018 235);
+  --card: oklch(0.24 0.02 245);
   --card-foreground: var(--foreground);
-  --popover: oklch(0.245 0.022 60);
+  --popover: oklch(0.26 0.022 245);
   --popover-foreground: var(--foreground);
   --primary: var(--brand-primary);
   --primary-foreground: var(--brand-primary-foreground);
-  --secondary: oklch(0.275 0.025 60);
-  --secondary-foreground: oklch(0.9 0.014 78);
-  --muted: oklch(0.25 0.018 60);
-  --muted-foreground: oklch(0.7 0.025 72);
-  --accent: oklch(0.28 0.055 55);
-  --accent-foreground: oklch(0.84 0.1 70);
-  --destructive: oklch(0.68 0.19 25);
+  --secondary: oklch(0.29 0.022 246);
+  --secondary-foreground: oklch(0.88 0.015 235);
+  --muted: oklch(0.27 0.018 246);
+  --muted-foreground: oklch(0.72 0.02 235);
+  --accent: oklch(0.31 0.05 219);
+  --accent-foreground: oklch(0.83 0.09 214);
+  --destructive: oklch(0.69 0.2 26);
   --destructive-foreground: oklch(0.985 0 0);
-  --success: oklch(0.72 0.145 128);
-  --success-foreground: oklch(0.78 0.12 128);
-  --warning: oklch(0.78 0.15 78);
-  --warning-foreground: oklch(0.82 0.13 80);
-  --border: oklch(0.3 0.022 60);
-  --input: oklch(0.33 0.026 60);
-  --ring: oklch(0.74 0.175 54);
-  --sidebar: oklch(0.14 0.014 60);
-  --sidebar-foreground: oklch(0.84 0.018 75);
-  --sidebar-accent: oklch(0.27 0.05 55);
-  --sidebar-accent-foreground: oklch(0.86 0.1 70);
-  --sidebar-border: oklch(0.265 0.018 60);
-  --chart-1: oklch(0.74 0.18 54);
-  --chart-2: oklch(0.72 0.145 128);
-  --chart-3: oklch(0.7 0.12 205);
-  --chart-4: oklch(0.76 0.14 82);
+  --success: oklch(0.74 0.14 161);
+  --success-foreground: oklch(0.79 0.11 161);
+  --warning: oklch(0.79 0.16 84);
+  --warning-foreground: oklch(0.84 0.12 84);
+  --border: oklch(0.32 0.02 246);
+  --input: oklch(0.35 0.024 246);
+  --ring: oklch(0.72 0.14 219);
+  --sidebar: oklch(0.16 0.017 245);
+  --sidebar-foreground: oklch(0.84 0.02 235);
+  --sidebar-accent: oklch(0.29 0.048 220);
+  --sidebar-accent-foreground: oklch(0.85 0.09 214);
+  --sidebar-border: oklch(0.29 0.018 246);
+  --chart-1: oklch(0.72 0.14 219);
+  --chart-2: oklch(0.73 0.12 181);
+  --chart-3: oklch(0.7 0.1 266);
+  --chart-4: oklch(0.79 0.16 84);
   --chart-5: oklch(0.7 0.14 330);
   --file-code: var(--chart-1);
   --file-audio: var(--chart-5);
